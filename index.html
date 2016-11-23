@@ -1,9 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="overviewApp">
+<html ng-app="upvoteApp">
+  <head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  </head>
   <body>
-    <section ng-controller="TestCtrl">
+    <nav></nav>
+
+    <section ng-controller="voteCtrl">
+      <h3 style ="text-align: center" class="page-header"> Upvote Posts </h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+
+            <form class="form-inline">
+              <div class="form-group">
+                <h4>Add a new post</h4>
+                <input class="form-control" type="text" placeholder="Write your post..."/>
+                <input ng-click= "displayPost()" type="button" value="Post" class="btn-primary" />
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
     </section>
-  
+
     <script src="node_modules/angular/angular.js"></script>
     <script src="app.js"></script>
   </body>
